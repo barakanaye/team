@@ -5,19 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Whinuri Project</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f4f8fb; color: #333; }
-    header, footer { background: #004d40; color: white; text-align: center; padding: 20px; }
-    nav { background: #00796b; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 20px auto; padding: 20px; }
-    .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
-    .card img { width: 100%; }
-    .card h3 { margin: 10px 15px 0; color: #00796b; }
-    .card p { margin: 10px 15px 15px; }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f4f8fb;
+      color: #333;
+    }
+    header {
+      background: #004d40;
+      color: white;
+      text-align: left;
+      padding: 20px 40px;
+    }
+    nav {
+      background: #00796b;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .card img {
+      width: 100%;
+    }
+    .card h3 {
+      margin: 10px 15px 0;
+      color: #00796b;
+    }
+    .card p {
+      margin: 10px 15px 15px;
+    }
+    footer {
+      background: #004d40;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .footer-logo {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #004d40;
+      font-size: 18px;
+    }
+    .footer-text {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Tampilan HP */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        width: 100%;
+        max-width: 300px;
+        background: #00695c;
+        text-align: center;
+      }
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-logo {
+        margin-bottom: 10px;
+      }
+    }
   </style>
 </head>
 <body>
-<header><h1>Whinuri Project</h1><p>Solusi Teknologi untuk Desa</p></header>
+
+<header>
+  <h1>Whinuri Project</h1>
+  <p>Solusi Teknologi untuk Desa</p>
+</header>
+
 <nav>
   <a href="index.html">Beranda</a>
   <a href="internet-desa.html">Internet Desa</a>
@@ -25,6 +118,7 @@
   <a href="layanan-edc.html">Layanan EDC</a>
   <a href="kontak.html">Kontak</a>
 </nav>
+
 <section class="grid">
   <div class="card">
     <a href="internet-desa.html"><img src="https://via.placeholder.com/800x400?text=Internet+Desa" alt=""></a>
@@ -42,6 +136,14 @@
     <p>Penyediaan EDC mini ATM untuk transaksi tunai dan non-tunai.</p>
   </div>
 </section>
-<footer><p>&copy; 2025 Whinuri Project</p></footer>
+
+<footer>
+  <div class="footer-logo">W</div>
+  <div class="footer-text">
+    <strong>Whinuri Project</strong><br>
+    &copy; 2025 — Teknologi untuk Kemajuan Desa
+  </div>
+</footer>
+
 </body>
 </html>
