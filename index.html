@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Produk Starlink - Whinuri Project</title>
+  <title>Whinuri Project</title>
   <style>
     body {
       font-family: sans-serif;
@@ -34,35 +34,27 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       max-width: 1000px;
       margin: 20px auto;
       padding: 20px;
     }
-    .product-card {
+    .card {
       background: white;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      text-align: center;
-      padding-bottom: 15px;
     }
-    .product-card img {
+    .card img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
     }
-    .product-card h3 {
-      margin: 10px 15px 5px;
+    .card h3 {
+      margin: 10px 15px 0;
       color: #00796b;
     }
-    .product-card p {
-      margin: 0 15px 5px;
-    }
-    .price {
-      font-weight: bold;
-      color: #e91e63;
+    .card p {
+      margin: 10px 15px 15px;
     }
     footer {
       background: #004d40;
@@ -89,13 +81,34 @@
       font-size: 16px;
       line-height: 1.5;
     }
+
+    /* Tampilan HP */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        width: 100%;
+        max-width: 300px;
+        background: #00695c;
+        text-align: center;
+      }
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-logo {
+        margin-bottom: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Produk Starlink</h1>
-  <p>Pilihan produk untuk pemasangan Internet Desa</p>
+  <h1>Whinuri Project</h1>
+  <p>Solusi Teknologi untuk Desa</p>
 </header>
 
 <nav>
@@ -107,29 +120,20 @@
 </nav>
 
 <section class="grid">
-  <div class="product-card">
-    <img src="https://via.placeholder.com/300x200?text=Starlink+Kit" alt="Starlink Kit">
-    <h3>Starlink Kit Lengkap</h3>
-    <p>Perangkat lengkap pemasangan Starlink.</p>
-    <p class="price">Rp 8.500.000</p>
+  <div class="card">
+    <a href="internet-desa.html"><img src="https://via.placeholder.com/800x400?text=Internet+Desa" alt=""></a>
+    <h3>Internet Desa (Starlink)</h3>
+    <p>Layanan pemasangan Internet Starlink untuk daerah blank spot.</p>
   </div>
-  <div class="product-card">
-    <img src="https://via.placeholder.com/300x200?text=Router+WiFi" alt="Router WiFi">
-    <h3>Router WiFi Tambahan</h3>
-    <p>Router tambahan untuk memperluas jangkauan internet.</p>
-    <p class="price">Rp 750.000</p>
+  <div class="card">
+    <a href="pelatihan-hp.html"><img src="https://via.placeholder.com/800x400?text=Pelatihan+HP" alt=""></a>
+    <h3>Pelatihan & Servis HP</h3>
+    <p>Latihan teknisi HP dan layanan servis langsung ke warga desa.</p>
   </div>
-  <div class="product-card">
-    <img src="https://via.placeholder.com/300x200?text=Tiang+3M" alt="Tiang 3M">
-    <h3>Tiang Pemasangan 3 Meter</h3>
-    <p>Tiang dudukan parabola Starlink.</p>
-    <p class="price">Rp 350.000</p>
-  </div>
-  <div class="product-card">
-    <img src="https://via.placeholder.com/300x200?text=Pemasangan" alt="Pemasangan">
-    <h3>Jasa Pemasangan</h3>
-    <p>Layanan instalasi dan pengujian di lokasi desa.</p>
-    <p class="price">Rp 1.000.000</p>
+  <div class="card">
+    <a href="layanan-edc.html"><img src="https://via.placeholder.com/800x400?text=EDC+Mini+ATM" alt=""></a>
+    <h3>Layanan Mesin EDC</h3>
+    <p>Penyediaan EDC mini ATM untuk transaksi tunai dan non-tunai.</p>
   </div>
 </section>
 
